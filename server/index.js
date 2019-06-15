@@ -6,6 +6,7 @@ var SERVER_PORT = 3004;
 
 app.get('/draft-label', function(request, response) {
   response.setHeader('Content-Type', 'application/json');
+  response.setHeader('Access-Control-Allow-Origin', '*');
   response.send(JSON.stringify(draftLabel));
 });
 
