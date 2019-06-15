@@ -5,6 +5,7 @@ import './App.css';
 
 import PageTitle from './Components/PageTitle/index'
 import Notification from './Components/Notification/index'
+import Order from './Components/Order/index'
 
 class App extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class App extends React.Component {
       <div className="App">
         <PageTitle />
         <Notification type="info" message="You have been paid. Please, print your label and dispatch your item." />
+        <Order order={this.state.order} />
       </div>
     );
     }
