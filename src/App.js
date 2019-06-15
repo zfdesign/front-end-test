@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
+import PageTitle from './Components/PageTitle/index'
 
 function App() {
   return (
     <div className="App">
-      {/* Delete this paragraph */}
-      <p>Thank you for applying to our Front End developer role at Shutl, an eBay company.</p>
-      <p>Happy Coding! <span role="img" aria-label="Rocket">🚀</span></p>
-      {/* Delete this paragraph ^^ */}
+      <PageTitle />
     </div>
   );
 }
