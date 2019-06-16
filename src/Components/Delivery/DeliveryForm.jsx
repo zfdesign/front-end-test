@@ -12,31 +12,29 @@ class DeliveryForm extends Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        console.log(this.props.service)
-        this.props.onSubmit(this.props.service);
+        // console.log(this.props.service)
+        this.props.onSubmit();
     }
 
     render () {
         const service = this.props.service
         return (
             <div className="c-DeliveryForm">
-            { this.props.service ? (
-                <form onSubmit={this.handleSubmit}>
-                    <input type="hidden" defaultValue={this.state.service} />
-                    <div className="service">
-                        <p><b>{service.name}</b><br />
-                        drop-off at {service.carrier}</p>
-                    </div>
-                    <div className="price">
-                        <p>Total £{service.price}</p>
-                    </div>
-                    <div className="purchase">
-                        <button type="submit" className="btn btn-prim gh-spr">Purchase and print label</button>
-                    </div>
-                </form>) : (
+                { this.props.service ? (
+                    <form onSubmit={this.handleSubmit}>
+                        <p className="service">
+                            <b>{service.name}</b><br />
+                            drop-off at {service.carrier}
+                        </p>
+                        <p className="price">Total £{service.price}</p>
+                        <fieldset className="purchase">
+                            <input type="hidden" defaultValue={this.state.service} />
+                            <button type="submit" className="btn btn-prim gh-spr">Purchase and print label</button>
+                        </fieldset>
+                    </form>
+                ) : (
                     <p>Please select service</p>
-                )
-            }
+                )}
             </div>
         );
     }

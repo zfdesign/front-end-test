@@ -1,12 +1,10 @@
 .c-DeliveryForm {
     position: sticky;
     bottom: 0;
-
     margin: 2em 0 0;
     padding: 1em;
     border: 1px solid grey;
     background-color: white;
-
 
     .service p, 
     .price  p {
@@ -18,16 +16,12 @@
     }
 
     @media screen and (min-width: 480px) {
-        .service, 
+        form {
+            display: grid;
+            grid-column-gap: 0;
+            grid-template-columns: auto auto 204px;
+        }
         .price,
-        .purchase {
-            display: inline-block;
-            width: 30%;
-        }
-        .service {
-            width: 40%;
-        }
-        .price, 
         .purchase {
             text-align: right;
         }

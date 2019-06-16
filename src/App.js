@@ -29,9 +29,8 @@ class App extends React.Component {
     this.setState({selectedDelivery: delivery})
   }
 
-  purchaseDelivery (delivery) {
-    console.log(delivery)
-    // TODO: api
+  purchaseDelivery () {
+    // TODO: server.js
     apiClient.purchaseDelivery(this.state.selectedDelivery)
   }
 

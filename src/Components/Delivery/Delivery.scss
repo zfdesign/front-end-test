@@ -2,19 +2,22 @@
     clear: both;
 
     table.delivery-services {
-        tr {
-            height: 2.4em;
-        }
+        border-collapse: collapse;
+        width: 100%;
 
         th, 
         td {
-            padding: 1em;
+            padding: .4em;
             vertical-align: top;
+            
+            @media screen and (min-width: 420px) {
+                padding: 1em;
+            }
         }
 
         th {
             text-align: left;
-            background-color: grey;
+            background-color: lightgrey;
         }
 
         h3 {
