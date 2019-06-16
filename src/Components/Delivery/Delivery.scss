@@ -1,0 +1,29 @@
+.c-Delivery {
+    clear: both;
+
+    table.delivery-services {
+        tr {
+            height: 2.4em;
+        }
+
+        th, 
+        td {
+            padding: 1em;
+            vertical-align: top;
+        }
+
+        th {
+            text-align: left;
+            background-color: grey;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        .price {
+            text-align: right;
+        }
+
+    }
+}

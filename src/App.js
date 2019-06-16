@@ -6,16 +6,23 @@ import './App.css';
 import PageTitle from './Components/PageTitle/index'
 import Notification from './Components/Notification/index'
 import Order from './Components/Order/index'
+import Delivery from './Components/Delivery/index'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       order: null,
-      services: null
+      services: null,
+      slectedDelivery: null
     };
 
+    this.sectedDelivery = this.setSelectedDelivery.bind(this)
     this.onUnavailableHandler = function (err, file, lineNo) {return new Error(err, file, lineNo)}
+  }
+
+  setSelectedDelivery(delivery) {
+    this.setState({selectedDelivery: delivery})
   }
 
   componentWillMount () {
@@ -36,6 +43,7 @@ class App extends React.Component {
         <PageTitle />
         <Notification type="info" message="You have been paid. Please, print your label and dispatch your item." />
         <Order order={this.state.order} />
+        <Delivery services={this.state.services} onSectedDelivery={this.sectedDelivery} />
       </div>
     );
     }
