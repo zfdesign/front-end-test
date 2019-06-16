@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./DeliveryForm.scss";
+import "./PurchaseForm.scss";
 
-class DeliveryForm extends Component {
+class PurchaseForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +19,7 @@ class DeliveryForm extends Component {
     render () {
         const service = this.props.service
         return (
-            <div className="c-DeliveryForm">
+            <div className="c-PurchaseForm">
                 { this.props.service ? (
                     <form onSubmit={this.handleSubmit}>
                         <p className="service">
@@ -40,4 +40,4 @@ class DeliveryForm extends Component {
     }
 }
 
-export default DeliveryForm;
+export default PurchaseForm;

@@ -7,7 +7,7 @@ import PageTitle from './Components/PageTitle/index'
 import Notification from './Components/Notification/index'
 import Order from './Components/Order/index'
 import Delivery from './Components/Delivery/index'
-import DeliveryForm from './Components/Delivery/DeliveryForm'
+import PurchaseForm from './Components/PurchaseForm/index'
 
 class App extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class App extends React.Component {
         <Notification type="info" message="You have been paid. Please, print your label and dispatch your item." />
         <Order order={this.state.order} />
         <Delivery services={this.state.services} onSectedDelivery={this.sectedDelivery} />
-        <DeliveryForm service={this.state.selectedDelivery} onSubmit={this.purchaseDelivery} />
+        <PurchaseForm service={this.state.selectedDelivery} onSubmit={this.purchaseDelivery} />
       </div>
     );
     }
