@@ -1,0 +1,35 @@
+.c-DeliveryForm {
+    position: sticky;
+    bottom: 0;
+
+    margin: 2em 0 0;
+    padding: 1em;
+    border: 1px solid grey;
+    background-color: white;
+
+
+    .service p, 
+    .price  p {
+        margin-right: 1em;
+    }
+    .purchase button {
+        background-color: #3665f3;
+        color: white;
+    }
+
+    @media screen and (min-width: 480px) {
+        .service, 
+        .price,
+        .purchase {
+            display: inline-block;
+            width: 30%;
+        }
+        .service {
+            width: 40%;
+        }
+        .price, 
+        .purchase {
+            text-align: right;
+        }
+    }
+}

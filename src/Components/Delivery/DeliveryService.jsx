@@ -7,8 +7,14 @@ class Delivery extends Component {
     }
 
     onSelectedDelivery (service) {
-        console.log(service)
+        // console.log(service)
         this.props.onChange(service);
+    }
+
+    componentDidMount() {
+        if (this.props.selected) {
+            this.onSelectedDelivery(this.props.service)
+        }
     }
 
     render () {
@@ -25,8 +31,8 @@ class Delivery extends Component {
                     />
                 </td>
                 <td>
-                    <h3>{service.name}<br />
-                    <span className="small">drop-off at {service.carrier}</span></h3>
+                    <p><b>{service.name}</b><br />
+                    drop-off at {service.carrier}</p>
                     <p>Max {service.dimensions}</p>
                 </td>
                 <td>Up to £{service.insurance} included</td>

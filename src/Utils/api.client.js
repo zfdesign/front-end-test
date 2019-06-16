@@ -11,5 +11,15 @@ const apiClient = axios.create({
 export default {
   getDraftLabel() {
     return apiClient.get('/draft-label')
+  },
+  purchaseDelivery(delivery) {
+    return apiClient.post(
+      '/purchase', 
+      { data: delivery }, 
+      { headers: {
+        'content-type': `multipart/form-data;`
+        }
+      }
+    )
   }
 }
