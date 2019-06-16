@@ -1,7 +1,7 @@
 import React from 'react';
 import apiClient from './Utils/api.client';
 
-import './App.css';
+import './App.scss';
 
 import PageTitle from './Components/PageTitle/index'
 import Notification from './Components/Notification/index'
